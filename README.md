@@ -83,7 +83,7 @@ Model performance was assessed using **5-fold cross-validation**, with
 
 ### Best Model Selection
 - **GBDT Model A** achieved the best overall performance:
-  - Lowest RMSE: **[0.160261] eV**
+  - Lowest RMSE: **0.16 eV**
   - Smallest cross-validation variance
 - Selected as the **primary model** for all subsequent analyses
 
@@ -93,8 +93,8 @@ Model performance was assessed using **5-fold cross-validation**, with
 
 ### 1. Uncertainty Quantification
 - Ensemble-based uncertainty estimation using multiple GBDT realizations
-- Mean predictive uncertainty: **[0.005309266607621332] eV**
-- Median predictive uncertainty: **[0.0051449736679444824] eV**
+- Mean predictive uncertainty: **0.0053 eV**
+- Median predictive uncertainty: **0.0051 eV**
 - Lower uncertainty observed in TMDC-relevant bandgap regions
 
 ### 2. Error Analysis by Bandgap Range
@@ -116,6 +116,22 @@ Model performance was assessed using **5-fold cross-validation**, with
 - Indicates absence of overfitting and potential benefit from larger datasets
 
 ---
+
+---
+
+## Requirements
+- Python ≥ 3.9
+- numpy, pandas
+- scikit-learn
+- xgboost
+- matplotlib
+- joblib
+
+---
+
+## References
+1. Jain et al., *PLOS ONE*, 2021  
+   
 
 
 

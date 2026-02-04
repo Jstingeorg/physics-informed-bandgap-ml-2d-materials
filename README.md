@@ -70,6 +70,12 @@ Model performance was assessed using **5-fold cross-validation**, with
 
 ## Results
 
+| Model | Model A RMSE (eV) | Model B RMSE (eV) |   Improvement  |
+|-------|-------------------|-------------------|----------------|
+| GBDT  |    **0.160261**   |      0.351136     | **54.359217%** |
+| RF    |      0.189887     |      0.349350     |   45.645632%   |
+| XGB   |      0.168604     |      0.347531     |   51.485117%   |
+
 ### Physics-Informed Advantage
 - Model A consistently outperforms Model B across all algorithms
 - Inclusion of non-SOC bandgap reduces RMSE by **~50%**

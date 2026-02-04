@@ -35,9 +35,9 @@ learn **SOC-induced bandgap corrections** in a physically meaningful and data-ef
 To focus on technologically relevant materials:
 - Bandgap range restricted to **0.8 – 2.5 eV**
 - This range captures most semiconducting TMDC monolayers
-- Final curated dataset contains ~400 materials
+- Final curated dataset contains 415 materials
 
-Processed dataset: data/tmdc_data_final.csv
+Processed dataset: 'data/tmdc_data_final.csv'
 
 
 ---
@@ -72,13 +72,13 @@ Model performance was assessed using **5-fold cross-validation**, with
 
 ### Physics-Informed Advantage
 - Model A consistently outperforms Model B across all algorithms
-- Inclusion of non-SOC bandgap reduces RMSE by **~30–50%**
+- Inclusion of non-SOC bandgap reduces RMSE by **~50%**
 - Confirms that physics-informed features significantly improve prediction accuracy
 
 ### Best Model Selection
-- **GBDT Model A** achieved:
-  - Lowest RMSE
-  - Best stability across folds
+- **GBDT Model A** achieved the best overall performance:
+  - Lowest RMSE: **[0.160261] eV**
+  - Smallest cross-validation variance
 - Selected as the **primary model** for all subsequent analyses
 
 ---
@@ -87,12 +87,13 @@ Model performance was assessed using **5-fold cross-validation**, with
 
 ### 1. Uncertainty Quantification
 - Ensemble-based uncertainty estimation using multiple GBDT realizations
-- Provides confidence estimates without Bayesian modeling
+- Mean predictive uncertainty: **[0.005309266607621332] eV**
+- Median predictive uncertainty: **[0.0051449736679444824] eV**
 - Lower uncertainty observed in TMDC-relevant bandgap regions
 
 ### 2. Error Analysis by Bandgap Range
 - Errors evaluated across discrete bandgap bins
-- Lowest error in the **1.2 – 2.0 eV** range
+- Lowest error in the **2.0 – 2.5 eV** range
 - Increased error near bandgap boundaries due to reduced data density
 
 ### 3. Feature Importance Consistency
@@ -109,24 +110,6 @@ Model performance was assessed using **5-fold cross-validation**, with
 - Indicates absence of overfitting and potential benefit from larger datasets
 
 ---
-
-## Repository Structure
-
----
-
-## How to Run
-### Requirements
-- Python ≥ 3.9
-- numpy
-- pandas
-- scikit-learn
-- xgboost
-- matplotlib
-- joblib
-
-Install dependencies:
-```bash
-pip install numpy pandas scikit-learn xgboost matplotlib joblib
 
 
 
